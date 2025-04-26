@@ -1,9 +1,40 @@
+// import React, { useEffect } from 'react';
+// import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler } from 'chart.js';
+// import { Bar } from 'react-chartjs-2';
+// import { CHART_COLORS } from '../utils/constants';
+// import { formatIndianCurrencyFull } from '../utils/formatters';
+// import type { YearlyProjection } from '../utils/calculations';
+
 import React, { useEffect } from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler } from 'chart.js';
+import { 
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+} from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { CHART_COLORS } from '../utils/constants';
 import { formatIndianCurrencyFull } from '../utils/formatters';
 import type { YearlyProjection } from '../utils/calculations';
+
+// 🛠 REGISTER the components (important for production)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler);
 
