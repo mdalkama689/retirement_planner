@@ -1,8 +1,6 @@
 import { RUPEE_SYMBOL, CRORE_VALUE, LAKH_VALUE, THOUSAND_VALUE } from './constants';
 
-/**
- * Format numbers as Indian currency with automatic scaling (lakhs, crores)
- */
+ 
 export const formatIndianCurrency = (amount: number): string => {
   if (isNaN(amount)) return `${RUPEE_SYMBOL}0`;
   
@@ -25,13 +23,11 @@ export const formatIndianCurrency = (amount: number): string => {
   return isNegative ? `-${formattedValue}` : formattedValue;
 };
 
-/**
- * Format numbers as Indian currency with full value (for detailed views)
- */
+
 export const formatIndianCurrencyFull = (amount: number): string => {
   if (isNaN(amount)) return `${RUPEE_SYMBOL}0`;
   
-  // Format with Indian number system (2 decimal places)
+
   const formatter = new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency: 'INR',
@@ -42,9 +38,7 @@ export const formatIndianCurrencyFull = (amount: number): string => {
   return formatter.format(amount);
 };
 
-/**
- * Format percentage values
- */
+
 export const formatPercentage = (value: number): string => {
   if (isNaN(value)) return '0%';
   return `${value.toFixed(1)}%`;

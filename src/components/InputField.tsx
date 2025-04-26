@@ -21,10 +21,8 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
   min,
   max,
-  step,
   tooltip,
-  suffix = '',
-  formatValue = (val) => val.toString(),
+  suffix = ''
 }) => {
   const [inputValue, setInputValue] = useState(value.toString());
   const [isFocused, setIsFocused] = useState(false);
@@ -35,10 +33,7 @@ const InputField: React.FC<InputFieldProps> = ({
     }
   }, [value, isFocused]);
 
-  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = parseFloat(e.target.value);
-    onChange(name, newValue);
-  };
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -88,25 +83,6 @@ const InputField: React.FC<InputFieldProps> = ({
         </div>
       </div>
 
-      {/* <div className="relative group">
-        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-gray-400 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          {formatValue(value)}
-        </div>
-         <input
-          type="range" 
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          onChange={handleSliderChange}
-          className="w-full"
-        />  
-        
-        <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>{formatValue(min)}</span>
-          <span>{formatValue(max)}</span>
-        </div>
-      </div> */}
     </div>
   );
 };

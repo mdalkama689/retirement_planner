@@ -1,14 +1,9 @@
 import React from 'react';
-import { Calendar, Coins, TrendingUp, DollarSign, PiggyBank } from 'lucide-react';
-import { formatIndianCurrency, formatPercentage } from '../utils/formatters';
+import { formatIndianCurrency } from '../utils/formatters';
 import InputField from './InputField';
 import { 
-  DEFAULT_INFLATION_RATE, 
-  DEFAULT_INVESTMENT_RETURN,
-  DEFAULT_RETIREMENT_AGE,
   MIN_RETIREMENT_AGE,
   MAX_RETIREMENT_AGE,
-  DEFAULT_LIFE_EXPECTANCY
 } from '../utils/constants';
 
 interface InputFormProps {
