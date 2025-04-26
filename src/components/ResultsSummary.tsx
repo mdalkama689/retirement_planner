@@ -205,13 +205,13 @@ const ResultsSummary: React.FC<ResultsSummaryProps> = ({
           Download Report
         </button>
         
-        <button 
+        {/* <button 
           className="flex-1 py-2 px-4 bg-secondary-600 hover:bg-secondary-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200"
           onClick={handleShare}
         >
           <Share2 className="h-4 w-4 mr-2" />
           Share Results
-        </button>
+        </button> */}
       </div>
     </div>
   );

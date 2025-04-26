@@ -44,9 +44,7 @@ export const formatPercentage = (value: number): string => {
   return `${value.toFixed(1)}%`;
 };
 
-/**
- * Format years (for age display)
- */
+
 export const formatYears = (years: number): string => {
   if (isNaN(years)) return '0 years';
   return years === 1 ? '1 year' : `${years} years`;
