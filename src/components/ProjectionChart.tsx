@@ -6,18 +6,21 @@
 // import type { YearlyProjection } from '../utils/calculations';
 
 import React, { useEffect } from 'react';
-import { 
+import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
   BarElement,
+  LineController, // ✅ Add this
+  BarController,  // ✅ And this
   Title,
   Tooltip,
   Legend,
   Filler
 } from 'chart.js';
+
 import { Bar } from 'react-chartjs-2';
 import { CHART_COLORS } from '../utils/constants';
 import { formatIndianCurrencyFull } from '../utils/formatters';
@@ -30,6 +33,8 @@ ChartJS.register(
   PointElement,
   LineElement,
   BarElement,
+  LineController,  // ✅
+  BarController,   // ✅
   Title,
   Tooltip,
   Legend,
