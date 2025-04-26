@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  input, select {
+    @apply bg-gray-800 border border-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition duration-200;
+  }
+
+  input[type="range"] {
+    @apply w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-primary-500 cursor-pointer hover:bg-primary-400 transition-colors duration-200;
+    border: 2px solid rgb(17, 24, 39);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-primary-500 cursor-pointer hover:bg-primary-400 transition-colors duration-200 border-2 border-gray-900;
+  }
+
+  input[type="range"]::-ms-thumb {
+    @apply w-5 h-5 rounded-full bg-primary-500 cursor-pointer hover:bg-primary-400 transition-colors duration-200 border-2 border-gray-900;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    @apply bg-gray-700 rounded-lg h-2;
+  }
+
+  input[type="range"]::-moz-range-track {
+    @apply bg-gray-700 rounded-lg h-2;
+  }
+
+  input[type="range"]::-ms-track {
+    @apply bg-gray-700 rounded-lg h-2;
+  }
+
+  button {
+    @apply px-4 py-2 rounded-md transition-all duration-200 ease-in-out;
+  }
+
+  button.primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-sm;
+  }
+
+  button.secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white;
+  }
+
+  button.accent {
+    @apply bg-accent-600 hover:bg-accent-700 text-white font-medium shadow-sm;
+  }
+
+  .card {
+    @apply bg-gray-900 rounded-lg shadow-lg p-6 border border-gray-800;
+  }
+
+  .tooltip {
+    @apply relative inline-block;
+  }
+
+  .tooltip .tooltip-text {
+    @apply invisible absolute z-10 w-48 bg-gray-800 text-gray-100 text-center rounded-md py-2 px-3 opacity-0 transition-opacity duration-300 text-sm bottom-full left-1/2 transform -translate-x-1/2 mb-2;
+  }
+
+  .tooltip:hover .tooltip-text {
+    @apply visible opacity-100;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Input number spinner removal */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
