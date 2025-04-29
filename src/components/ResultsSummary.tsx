@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, TrendingDown, Download, Share2, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { TrendingUp, TrendingDown, Download, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import { formatIndianCurrency, formatIndianCurrencyFull, formatYears } from '../utils/formatters';
 import toast from 'react-hot-toast';
 

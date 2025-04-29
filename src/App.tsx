@@ -1,6 +1,5 @@
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import RetirementCalculator from './components/RetirementCalculator';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
         </div>
       </main>
       
-      <Footer />
     </div>
   );
 }
