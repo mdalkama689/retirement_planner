@@ -1,10 +1,31 @@
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import RetirementCalculator from './components/RetirementCalculator';
+import MobileShare from './components/share/MobileShare';
+import TabShare from './components/share/TabShare';
+import { useEffect, useState } from 'react';
 
 function App() {
+   const [deviceType, setDeviceType] = useState<"big" | "small">("big");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDeviceType(window.innerWidth < 1024 ? "small" : "big");
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col">
+       {deviceType === "small" ? <MobileShare /> : <TabShare />}
       <Toaster
         position="top-right"
         toastOptions={{
