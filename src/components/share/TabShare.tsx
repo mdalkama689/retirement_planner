@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaPlusCircle } from "react-icons/fa";
+import { IoInformationCircle } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdOutlineInfo } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -40,7 +40,7 @@ const TabShare = () => {
             rel="noopener noreferrer"
             className="flex items-center bg-blue-600 text-white hover:bg-blue-700 rounded-md p-2 mt-1 transition-colors duration-300"
           >
-            <FaPlusCircle size={20} className="mr-2" />
+            <IoInformationCircle size={20} className="mr-2" />
             Add this tool to your website
           </Link>
         </div>
